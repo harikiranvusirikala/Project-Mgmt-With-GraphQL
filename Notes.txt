@@ -1,0 +1,88 @@
+Full-stack Project Management System with GraphQL, Express, MongoDB, React, and Apollo
+
+Simple Project Managment System
+	add clients, manage clients
+	add projects
+	connect projects to clients
+	project page showing all information including client information and area to update the the details, and button to delete the project
+	full CRUD functionality
+	using bootstrap - so we have modals to add new clients and new projects
+
+
+GraphQL Intro:
+===
+GraphQL is an open-source data query and manipulation language for APIs and a runtime for fulfilling queries with existing data.
+It is an alternative to a REST API, with some added benefits such as the ability to request the exact data that you want.
+
+In REST API, diffirent endpoints.
+In GraphQL single endpoint. Response included ONLY the data asked for
+
+Request/Query:
+{
+  client(id: "100") {
+    name,
+    client {
+      name
+    }
+  }
+}
+
+Response:
+{
+  "data": {
+    "project": {
+      "name": "Mobile Application",
+      "client": {
+        "name": "Tony Stark"
+      }
+    }
+  }
+}
+
+
+Mutation - used to add/update/delete data to server
+mutation {
+  addProject(
+  name: "Mobile Application",
+  description: "This is a description", status: "Not Started",
+  clientId: "1" ) {
+      name
+      description
+      status
+   }
+｝
+
+Response:
+{
+  "data": {
+    "addProject": {
+      "name": "Mobile Application",
+      "description": "This is a description",
+      "status": "Not Started"
+    }
+  ｝
+｝
+
+GraphiQL Tool (like Postman for REST API)
+
+Schemas & Types:
+GraphQL servers have a "schema" that specifies all of the fields as well as their "types".
+The most basic components of a GraphQL schema are object types,
+
+Scalar Types Include:
+String, Int, Float, Boolean, ID
+
+Object Type:
+type Project {
+  name: String!
+  description: String!,
+  status: String!
+}
+
+Getting Started:
+There are a lot of different technologies to chose from. There are also different methods for creating schemas, types, queries, etc
+
+We will be using a package called express-graphql which is a GraphQL server for Node.js with tools to use with Express.
+Apollo Server is another popular tool that you can use as well as some content management systems like Graph CMS to easily create a GraphQL API.
+===
+
