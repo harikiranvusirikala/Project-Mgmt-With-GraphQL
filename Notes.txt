@@ -86,3 +86,25 @@ We will be using a package called express-graphql which is a GraphQL server for 
 Apollo Server is another popular tool that you can use as well as some content management systems like Graph CMS to easily create a GraphQL API.
 ===
 
+
+I see graphql-http being replaced to express-graphql in https://graphql.org/graphql-js/running-an-express-graphql-server/.
+
+Initialize package.json
+$ npm init -y
+
+$ npm i express express-graphql graphql mongoose cors colors
+($ npm install express graphql-http graphql mongoose cors colors --save)
+mongoose - help us connect and interact with MongoDB.
+
+Adding dev dependencies
+$ npm i -D nodemon dotenv
+nodemon - constantly watch our files and we don't have to keep restarting after we make a change
+dotenv - dot env file to define all of our environment variables
+
+Add following in scripts of package.json
+"start": "node server/index.js",
+"dev": "nodemon server/index.js"
+
+To start the application
+$ npm run dev
+
