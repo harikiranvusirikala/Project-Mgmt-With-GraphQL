@@ -151,3 +151,19 @@ Run Query using command "Control + Enter"
     }
   }
 }
+
+Till now we have used javascript file for data, now lets move to using the database.
+
+MongoDB Atlas
+- The multi-cloud developer data platform.
+- An integrated suite of data services centered around a cloud database designed to accelerate and simplify how you build with data.
+- https://www.mongodb.com/products/platform/atlas-database
+
+Create and account for MongoDB atlas.
+- https://www.mongodb.com/cloud/atlas/register
+
+Create a cluster
+Add a user (harikiran, harikiran), and add My Current IP Address (if not added) - These can be changes later in Database Access and Network Access
+
+Go to Database -> Cluster 0 -> Browse Collections -> Add My Own Data -> mgmt_db, clients
+
