@@ -139,3 +139,15 @@ Run Query using command "Control + Enter"
   }
 }
 
+{
+  project(id: 1) {
+    id
+    name
+    description
+    status
+    client {
+      name
+      id
+    }
+  }
+}
