@@ -110,3 +110,22 @@ $ npm run dev
 
 For time being we use data from sampleData.js file to use in schema.js
 
+http://localhost:5000/graphql -> Opens GraphiQL UI
+
+{
+  client(id: 1) {
+    name
+    email
+  }
+}
+
+{
+  clients {
+    id
+    name
+    email
+    phone
+  }
+}
+
+Run Query using command "Control + Enter"
