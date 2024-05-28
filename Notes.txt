@@ -167,3 +167,7 @@ Add a user (harikiran, harikiran), and add My Current IP Address (if not added) 
 
 Go to Database -> Cluster 0 -> Browse Collections -> Add My Own Data -> mgmt_db, clients
 
+(We can use MongoDB Compass Desktop application also)
+Overview -> Connect -> Do both Compass and Driver setup
+
+Response as per console log "MongoDB Connected ac-rbjyb79-shard-00-00.fqmzawg.mongodb.net"
