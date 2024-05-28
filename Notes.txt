@@ -171,3 +171,7 @@ Go to Database -> Cluster 0 -> Browse Collections -> Add My Own Data -> mgmt_db,
 Overview -> Connect -> Do both Compass and Driver setup
 
 Response as per console log "MongoDB Connected ac-rbjyb79-shard-00-00.fqmzawg.mongodb.net"
+
+Mongoose schema is not related to GraphQL schema
+
+Think like we have a database, and top of that we have mongoose layer, the object data mapper layer. Where we create schema that includes fields for our database collections. And on top of that is our graphQL API and that's where the garphQL schema comes in.
