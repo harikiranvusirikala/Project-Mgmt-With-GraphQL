@@ -195,3 +195,30 @@ Now update code to fetch data from mongoDB instead of javascript file.
   }
 }
 
+GraphQL Queries & Mutations - https://gist.github.com/harikiranvusirikala/ea919547a29576d334ee195156679b02
+
+mutation {
+  addClient(name: "Tony Stark", email: "ironman@gmail.com", phone: "955-365-3376") {
+    id
+    name
+    email
+    phone
+  }
+}
+=>
+{
+  "data": {
+    "addClient": {
+      "id": "66556de8e829a0431c71d7dc",
+      "name": "Tony Stark",
+      "email": "ironman@gmail.com",
+      "phone": "955-365-3376"
+    }
+  }
+}
+
+mutation {
+  deleteClient(id: "6655703e0386f2d6bd082796"){
+    name
+  }
+}
