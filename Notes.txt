@@ -175,3 +175,23 @@ Response as per console log "MongoDB Connected ac-rbjyb79-shard-00-00.fqmzawg.mo
 Mongoose schema is not related to GraphQL schema
 
 Think like we have a database, and top of that we have mongoose layer, the object data mapper layer. Where we create schema that includes fields for our database collections. And on top of that is our graphQL API and that's where the garphQL schema comes in.
+
+Now update code to fetch data from mongoDB instead of javascript file.
+{
+  projects {
+    name
+    description
+    status
+    client {
+      name
+      id
+    }
+  }
+}
+=>
+{
+  "data": {
+    "projects": []
+  }
+}
+
