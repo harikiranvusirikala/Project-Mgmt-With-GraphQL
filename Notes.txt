@@ -236,3 +236,8 @@ mutation {
   }
 }
 
+We have done backend with all CURD operation needed for front end. Now starting on front end.
+$ npx create-react-app client
+cd client
+$ npm i @apollo/client graphql react-router-dom react-icons
+$ npm start
