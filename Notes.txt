@@ -230,3 +230,9 @@ mutation {
   }
 }
 
+mutation {
+  deleteProject(id: "6656c84ae0a5cad38699119f") {
+    id
+  }
+}
+
