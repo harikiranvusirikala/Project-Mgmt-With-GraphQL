@@ -222,3 +222,11 @@ mutation {
     name
   }
 }
+
+mutation {
+  addProject(name: "Mobile App2", description: "This is the project description", status: new, clientId: "66556de8e829a0431c71d7dc") {
+   name
+   description
+  }
+}
+
