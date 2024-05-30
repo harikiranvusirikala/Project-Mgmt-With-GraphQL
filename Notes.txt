@@ -105,7 +105,7 @@ Add following in scripts of package.json
 "start": "node server/index.js",
 "dev": "nodemon server/index.js"
 
-To start the application
+To start the backend (remember to whitelist your IP to MongoDB cluster in Atlas https://cloud.mongodb.com/)
 $ npm run dev
 
 For time being we use data from sampleData.js file to use in schema.js
