@@ -240,6 +240,8 @@ We have done backend with all CURD operation needed for front end. Now starting 
 $ npx create-react-app client
 cd client
 $ npm i @apollo/client graphql react-router-dom react-icons
+
+To start the frontend
 $ npm start
 
 https://getbootstrap.com/ -> Include via CDN -> Add Bootstrap CSS & JavaScript in index.html
