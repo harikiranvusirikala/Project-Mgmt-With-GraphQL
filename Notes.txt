@@ -241,9 +241,16 @@ $ npx create-react-app client
 cd client
 $ npm i @apollo/client graphql react-router-dom react-icons
 
-To start the frontend
+To start the frontend (should be in client folder)
 $ npm start
 
 https://getbootstrap.com/ -> Include via CDN -> Add Bootstrap CSS & JavaScript in index.html
 
 Header.jsx -> rfc (make sure to have the React extension "ES7 React/Redux/GraphQL/Rea...")
+
+Bootstrap Modal example: https://getbootstrap.com/docs/5.3/components/modal/#live-demo
+-> change class to className (for react frontend)
+-> remove tabIndex="-1"
+
+(Ctrl+D selects the word at the cursor, or the next occurrence of the current selection.
+Ctrl+Shift+L, will add a selection at each occurrence of the current selected text.)
