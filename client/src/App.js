@@ -1,8 +1,7 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from "./components/Header";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
-import Clients from "./components/Clients";
-import AddClientModal from "./components/AddClientModal";
-import Projects from "./components/Projects";
+import Home from './pages/Home';
 
 const cache = new InMemoryCache({ // To resolve the warning
   typePolicies: {
@@ -31,12 +30,14 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client} >
-      <Header />
-      <div className="container">
-        <AddClientModal />
-        <Projects />
-        <Clients />
-      </div>
+      <BrowserRouter>
+        <Header />
+        <div className="container">
+          <Routes>
+            <Route path='/' element={<Home />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
     </ApolloProvider>
   );
 }
