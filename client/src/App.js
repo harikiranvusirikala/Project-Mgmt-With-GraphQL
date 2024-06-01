@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from "./components/Header";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 import Home from './pages/Home';
+import NotFound from './pages/NotFound';
 
 const cache = new InMemoryCache({ // To resolve the warning
   typePolicies: {
@@ -35,6 +36,7 @@ function App() {
         <div className="container">
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='*' element={<NotFound />} />
           </Routes>
         </div>
       </BrowserRouter>
