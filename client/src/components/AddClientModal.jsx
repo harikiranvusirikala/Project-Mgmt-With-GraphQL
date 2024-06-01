@@ -36,7 +36,7 @@ export default function AddClientModal() {
   })
 
   return (
-    <div>
+    <>
       <button type="button" className="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#addClientModal">
         <div className="d-flex align-items-center">
           <FaUser className="icon" />
@@ -80,6 +80,6 @@ export default function AddClientModal() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 } 
