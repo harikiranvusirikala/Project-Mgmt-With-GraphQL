@@ -4,6 +4,7 @@ import { useQuery } from '@apollo/client';
 import Spinner from '../components/Spinner';
 import ClientInfo from '../components/ClientInfo';
 import DeleteProjectButton from '../components/DeleteProjectButton';
+import EditProjectForm from '../components/EditProjectForm';
 
 export default function Project() {
   const { id } = useParams()
@@ -28,6 +29,9 @@ export default function Project() {
           <p className="lead">{data.project.status}</p>
 
           <ClientInfo client={data.project.client} />
+
+          <EditProjectForm project={data.project} />
+
           {/* As this component is already have a query/mutation running, better to have delete feature in separate component */}
           <DeleteProjectButton projectId={id} />
         </div>
