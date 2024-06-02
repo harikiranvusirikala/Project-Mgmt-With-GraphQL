@@ -1,11 +1,15 @@
+import { useQuery } from "@apollo/client";
 import { useState } from "react";
 import { FaList } from "react-icons/fa";
+import { GET_CLIENTS } from "../queries/clientQueries";
 
 export default function AddProjectModal() {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [status, setStatus] = useState("new");
   const [clientId, setClientId] = useState("");
+
+  const { loading, error, data } = useQuery(GET_CLIENTS);
 
   const onSubmit = (e => {
     e.preventDefault();
@@ -20,8 +24,13 @@ export default function AddProjectModal() {
     setClientId('')
   })
 
+  if (loading) return null
+  if (error) return "Something Went Wrong"
+
   return (
     <>
+      {!loading && !error && (
+        <>
       <button type="button" className="btn btn-primary " data-bs-toggle="modal" data-bs-target="#addProjectModal">
         <div className="d-flex align-items-center">
           <FaList className="icon" />
@@ -61,6 +70,15 @@ export default function AddProjectModal() {
                     <option value="completed">Completed</option>
                   </select>
                 </div>
+                <div className="mb-3">
+                  <label className="form-label">Client</label>
+                  <select id="clientId" className="form-select" value={clientId} onChange={(e) => setClientId(e.target.value)}>
+                    <option value="">Select Client</option>
+                    {data.clients.map(client =>
+                      <option key={client.id} value={client.id}>{client.name}</option>
+                    )}
+                  </select>
+                </div>
                 <button type="submit" className="btn btn-primary" data-bs-dismiss="modal">
                   Submit</button>
               </form>
@@ -68,6 +86,8 @@ export default function AddProjectModal() {
           </div>
         </div>
       </div>
+      </>
+      )}
     </>
   );
 } 
