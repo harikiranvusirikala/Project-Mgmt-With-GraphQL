@@ -254,3 +254,5 @@ Bootstrap Modal example: https://getbootstrap.com/docs/5.3/components/modal/#liv
 
 (Ctrl+D selects the word at the cursor, or the next occurrence of the current selection.
 Ctrl+Shift+L, will add a selection at each occurrence of the current selected text.)
+
+Facing issues with Project deletion(linked to client) when deleting the client.
