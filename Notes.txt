@@ -1,6 +1,6 @@
 Full-stack Project Management System with GraphQL, Express, MongoDB, React, and Apollo
 
-Simple Project Managment System
+Simple Project Management System
 	add clients, manage clients
 	add projects
 	connect projects to clients
@@ -110,7 +110,7 @@ $ npm run dev
 
 For time being we use data from sampleData.js file to use in schema.js
 
-http://localhost:5000/graphql -> Opens GraphiQL UI
+http://localhost:8000/graphql -> Opens GraphiQL UI
 
 {
   client(id: 1) {
